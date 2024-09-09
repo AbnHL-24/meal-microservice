@@ -17,6 +17,11 @@ public class UpdateMealUseCase implements UpdateMealInputPort {
 
     @Override
     public MealDomain updateMeal(UUID mealId, UpdateMealRequestDto updateMealRequestDto) {
-        return null;
+        var mealExist = mealDbEntityOutputAdapter.findMealByUuid(mealId);
+        if (mealExist.isPresent()) {
+            return mealExist.get();
+        } else {
+            return null;
+        }
     }
 }
