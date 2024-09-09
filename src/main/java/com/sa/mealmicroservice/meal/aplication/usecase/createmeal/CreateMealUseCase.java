@@ -15,7 +15,7 @@ public class CreateMealUseCase implements CreateMealInputPort {
     @Override
     public MealDomain createMeal(CreateMealRequestDto createMealRequestDto) {
         var meal = createMealRequestDto.toDomain();
-        var mealExist = mealDbEntityOutputAdapter.findMealByUuid(meal.getMealId());
+        var mealExist = mealDbEntityOutputAdapter.findMealByMealId(meal.getMealId());
         if (mealExist.isPresent()) {
             return mealExist.get();
         } else {

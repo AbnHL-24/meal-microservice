@@ -26,7 +26,7 @@ public class MealDbEntity {
     private String mealName;
 
     @Column
-    private Double mealCost;
+    private Double cost;
 
     @Column
     private String ingredients;
@@ -48,7 +48,7 @@ public class MealDbEntity {
         return MealDomain.builder()
                 .mealId(mealId)
                 .mealName(mealName)
-                .cost(mealCost)
+                .cost(cost)
                 .ingredients(ingredients)
                 .recipe(recipe)
                 .build();

@@ -7,6 +7,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface MealDbEntityRepository extends JpaRepository<MealDbEntity, String> {
-    boolean existsByMealId(Long mealId);
-    Optional<MealDomain> existsByMealUuid(UUID mealUuid);
+    //boolean existsByMealId(UUID mealId);
+    Optional<MealDomain> existsByMealId(UUID mealId);
 }

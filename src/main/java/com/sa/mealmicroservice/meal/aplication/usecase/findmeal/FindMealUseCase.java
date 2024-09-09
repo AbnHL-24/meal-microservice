@@ -16,7 +16,7 @@ public class FindMealUseCase implements FindMealByUuidInputPort {
 
     @Override
     public MealDomain findMealByUuid(UUID uuid) {
-        var optional = findMealOutputPort.findMealByUuid(uuid);
+        var optional = findMealOutputPort.findMealByMealId(uuid);
         if (optional.isPresent()) {
             return optional.get();
         }

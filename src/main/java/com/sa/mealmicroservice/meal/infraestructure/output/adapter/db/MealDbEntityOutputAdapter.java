@@ -30,9 +30,9 @@ public class MealDbEntityOutputAdapter
     }
 
     @Override
-    public Optional<MealDomain> findMealByUuid(UUID uuid) {
+    public Optional<MealDomain> findMealByMealId(UUID uuid) {
         // TODO revisar esta cosa.
-        return mealDbEntityRepository.existsByMealUuid(uuid);
+        return mealDbEntityRepository.existsByMealId(uuid);
     }
 
     @Override

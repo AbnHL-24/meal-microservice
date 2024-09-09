@@ -6,5 +6,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface FindMealOutputPort {
-    Optional<MealDomain> findMealByUuid(UUID uuid);
+    Optional<MealDomain> findMealByMealId(UUID uuid);
 }
