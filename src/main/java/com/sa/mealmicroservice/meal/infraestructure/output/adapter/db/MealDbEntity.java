@@ -34,7 +34,7 @@ public class MealDbEntity {
     @Column
     private String recipe;
 
-    private static MealDbEntity fromDomain(MealDomain meal) {
+    public static MealDbEntity fromDomain(MealDomain meal) {
         return new MealDbEntity(
                 UUID.randomUUID(),
                 meal.getMealName(),
@@ -44,7 +44,7 @@ public class MealDbEntity {
         );
     }
 
-    private MealDomain toDomain() {
+    public MealDomain toDomain() {
         return MealDomain.builder()
                 .mealId(mealId)
                 .mealName(mealName)

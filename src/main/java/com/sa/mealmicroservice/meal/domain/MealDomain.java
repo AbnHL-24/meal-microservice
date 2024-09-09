@@ -1,6 +1,6 @@
 package com.sa.mealmicroservice.meal.domain;
 
-import com.sa.clientmicroservice.common.DomainEntity;
+import com.sa.mealmicroservice.common.DomainEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
