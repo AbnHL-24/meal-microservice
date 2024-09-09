@@ -9,10 +9,12 @@ import lombok.RequiredArgsConstructor;
 @UseCase
 @RequiredArgsConstructor
 public class CreateMealUseCase implements CreateMealInputPort {
+
     private final MealDbEntityOutputAdapter mealDbEntityOutputAdapter;
 
     @Override
     public MealDomain createMeal(CreateMealRequestDto createMealRequestDto) {
+        // TODO Validate that client does not exist.
         var meal = createMealRequestDto.toDomain();
         return mealDbEntityOutputAdapter.createMeal(meal);
     }

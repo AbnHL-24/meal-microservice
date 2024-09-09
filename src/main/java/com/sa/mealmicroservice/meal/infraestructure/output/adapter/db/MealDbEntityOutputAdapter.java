@@ -5,7 +5,7 @@ import com.sa.mealmicroservice.meal.infraestructure.output.port.db.CreateMealOut
 import com.sa.mealmicroservice.meal.infraestructure.output.port.db.FindMealOutputPort;
 import com.sa.mealmicroservice.meal.infraestructure.output.port.db.ListMealOutputPort;
 import com.sa.mealmicroservice.meal.infraestructure.output.port.db.UpdateMealOutputPort;
-import com.sa.clientmicroservice.common.PersistenceAdapter;
+import com.sa.mealmicroservice.common.PersistenceAdapter;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
