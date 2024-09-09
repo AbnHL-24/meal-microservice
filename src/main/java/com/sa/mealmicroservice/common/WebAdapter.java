@@ -14,4 +14,7 @@ import java.lang.annotation.*;
 public @interface WebAdapter {
     @AliasFor(annotation = Controller.class)
     String value() default "";
+
+
+
 }
