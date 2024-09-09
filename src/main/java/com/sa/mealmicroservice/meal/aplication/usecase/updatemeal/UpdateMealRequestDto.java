@@ -1,5 +1,6 @@
 package com.sa.mealmicroservice.meal.aplication.usecase.updatemeal;
 
+import com.sa.mealmicroservice.meal.domain.MealDomain;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -27,4 +28,13 @@ public record UpdateMealRequestDto(
         @Size(max = 1000, message = "The recipe must be written in 1000 characters")
         String recipe
 ) {
+        public MealDomain toDomain() {
+                return MealDomain.builder()
+                        .mealId(mealId)
+                        .mealName(name)
+                        .cost(cost)
+                        .ingredients(ingredients)
+                        .recipe(recipe)
+                        .build();
+        }
 }
